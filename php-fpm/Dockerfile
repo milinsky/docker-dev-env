@@ -1,4 +1,4 @@
-FROM php:latest
+FROM php:fpm
 
 # Update packages
 RUN apt-get update
