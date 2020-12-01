@@ -4,7 +4,7 @@ PHP7, PostgreSQL, Nginx  docker development environment
 
 ## PHP version
 
-php-fpm 7.4.x
+php-fpm 8.x
 
 ## PostgeSQL version
 
