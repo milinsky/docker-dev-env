@@ -13,6 +13,6 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/bin -
 # Install additional PHP libraries
 RUN apt-get install -y libpq-dev libonig-dev libxml2-dev \
     && docker-php-ext-configure pgsql -with-pgsql=/usr/local/pgsql \
-    && docker-php-ext-install pdo pgsql pdo_pgsql bcmath json mbstring tokenizer xml intl
+    && docker-php-ext-install pdo pgsql pdo_pgsql bcmath mbstring tokenizer xml intl
 
 WORKDIR /src
