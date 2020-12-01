@@ -1,4 +1,4 @@
-FROM php:fpm
+FROM php:8-fpm
 
 # Update packages
 RUN apt-get update
