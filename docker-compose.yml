@@ -5,7 +5,7 @@ services:
   nginx:
     image: nginx:latest
     ports:
-    - 127.0.0.1:80:80
+    - 80:80
     volumes:
     - ./src:/var/www/project
     - ./config/nginx:/etc/nginx/conf.d
@@ -17,21 +17,23 @@ services:
     build:
       context: php-fpm
     ports:
-    - 127.0.0.1:9000:9000
+    - 9000:9000
     volumes:
     - ./src:/var/www/project
     links:
-    - db
+    - database
 
-  db:
+  database:
+    hostname: database
     image: postgres:latest
     ports:
-    - 127.0.0.1:5432:5432
+      - 5432:5432
     restart: always
     environment:
-    - POSTGRES_HOST_AUTH_METHOD=md5
-    - POSTGRES_PASSWORD=password
-    - POSTGRES_USER=test
-    - POSTGRES_DB=test
+      - POSTGRES_HOST_AUTH_METHOD=md5
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_USER=test
+      - POSTGRES_DB=test
+      - DATABASE_URL=postgresql://test:password@database:5432/test
     volumes:
-    - ./databases/postgres:/var/lib/postgresql/data
+      - ./docker/databases/postgres:/var/lib/postgresql/data

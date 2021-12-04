@@ -1,0 +1,11 @@
+
+/vendor/
+/docker/databases/
+.idea/
+.phpunit
+.phpunit.result.cache
+/phpunit.xml
+/phpunit.xml
+.phpunit.result.cache
+.DS_Store
+*.log
