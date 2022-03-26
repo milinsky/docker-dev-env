@@ -7,19 +7,19 @@ services:
     ports:
     - 80:80
     volumes:
-    - ./src:/var/www/project
-    - ./config/nginx:/etc/nginx/conf.d
-    - ./logs/nginx:/var/log/nginx
+    - .:/var/www/project
+    - ./docker/config/nginx:/etc/nginx/conf.d
+    - ./docker/logs/nginx:/var/log/nginx
     links:
     - php-fpm
 
   php-fpm:
     build:
-      context: php-fpm
+      context: docker/php-fpm
     ports:
     - 9000:9000
     volumes:
-    - ./src:/var/www/project
+    - .:/var/www/project
     links:
     - database
 
