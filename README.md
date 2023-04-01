@@ -1,14 +1,14 @@
 # Docker development environment
 
-PHP 8, PostgreSQL, NGINX  docker development environment
+PHP 8, PostgreSQL and NGINX docker development environment
 
 ## PHP version
 
-php-fpm 8.x
+php-fpm 8.2
 
 ## PostgeSQL version
 
-PostgreSQL 15.x
+PostgreSQL 15
 
 ## Additional packages
 
@@ -17,6 +17,8 @@ PostgreSQL 15.x
 - NPM
 
 - cURL
+
+- Xdebug
 
 # Run
 
