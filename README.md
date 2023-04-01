@@ -1,6 +1,6 @@
 # Docker development environment
 
-PHP 8, PostgreSQL, Nginx  docker development environment
+PHP 8, PostgreSQL, NGINX  docker development environment
 
 ## PHP version
 
@@ -8,7 +8,7 @@ php-fpm 8.x
 
 ## PostgeSQL version
 
-PostgreSQL 12.x
+PostgreSQL 15.x
 
 ## Additional packages
 
@@ -20,6 +20,18 @@ PostgreSQL 12.x
 
 # Run
 
-$ docker-compose build
+$ make build
 
-$ docker-compose up
+$ make up
+
+# Stop
+
+$ make Stop
+
+# Restart
+
+$ make Restart
+
+# For execute console command use
+
+$ ./exec
